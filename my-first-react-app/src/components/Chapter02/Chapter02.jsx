@@ -43,11 +43,30 @@ const MemberInfo = (props) => {
     );
 };
 
-const Chapter02 = () => {
+const TestComponent = (props) => {
+    // Pure하지 않게 props값을 변경하려고 하면~~
+    // props.num = props.num + 1; 읽기전용이라는 뜻
     return (
         <>
-          <MemberInfo member={members[0]} />
-          {/* <MemberInfo member={members[1]} />
+         프롭스값 + 2 : <div>꽥</div>
+        </>
+    );
+};
+
+const Chapter02 = () => {
+    return (
+
+        <>
+        {
+          members ?  
+          members.map((e) => (<MemberInfo member={e} key={e.memberId} />
+        ))
+        :
+            <h1>조회결과가 없습니다.</h1>
+        }
+        
+          {/* <MemberInfo member={members[0]} />
+          <MemberInfo member={members[1]} />
           <MemberInfo member={members[2]} /> */}
 
             {/* <StyledDiv>
@@ -65,6 +84,16 @@ const Chapter02 = () => {
                 <strong>이름 : {members[2].memberName}</strong>
                 <p>이메일 : {members[2].email}</p>
             </StyledDiv> */}
+
+         <pre>
+            props사용 시 주의할 점! 
+            <br />
+            React의 함수형 컴포넌트는 항상 Pure하게 만들어야함!
+
+            React의 사용목적 : 웹 애플리케이션의 UI(UserInterface) = 
+            MVC(V) : 필요한 값 입력받기 / 요청보내기 / 요청 결과 출력 / 만들용도로 사용
+
+         </pre>
         </>
     );
 };

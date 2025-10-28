@@ -7,6 +7,7 @@ import FirstComponent from "./components/modules/FirstComponent";
 import Fusion from "./components/modules/Fusion";
 import { WhatIsJSX, WhatIsReact } from "./components/modules/WhatIs";
 import Chapter02 from "./components/Chapter02/Chapter02";
+import Chapter03 from "./components/Chapter03/Chapter03";
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <Route path="/fusion" element={<Fusion />} />
         <Route path="/01" element={<Chapter01 />} />
         <Route path="/02" element={<Chapter02 />} />
+         <Route path="/03" element={<Chapter03 />} />
         <Route path="/*" element={<h1>존재하지 않음</h1>} />
 
       </Routes>

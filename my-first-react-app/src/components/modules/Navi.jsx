@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { StyledredP } from "../Chapter01/Chapter01.styles";
 
 const Nav = () => {
@@ -6,11 +6,11 @@ const Nav = () => {
 
     return (
         <StyledredP>
-        <a onClick={() => navi("/fusion")}>fusion</a>
-        <a onClick={() => navi("/01")}>01</a>
-        <a href="/fusion">퓨전.</a>
-        <a href="/01">챕터01.</a>
-        <a href="/02">챕터02.</a>
+        <NavLink onClick={() => navi("/fusion")}>home</NavLink>
+        <NavLink onClick={() => navi("/fusion")}>fusion</NavLink>
+        <NavLink onClick={() => navi("/01")}>01</NavLink>
+        <NavLink onClick={() => navi("/02")}>02</NavLink>
+        <NavLink onClick={() => navi("/03")}>03</NavLink>
         </StyledredP>
 
     )
