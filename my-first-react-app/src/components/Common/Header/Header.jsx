@@ -1,14 +1,21 @@
-import Fusion from "../../modules/Fusion";
-import "./Header.css"
+import React from 'react';
 
-function Header() {
-    return(
-    <>
-    <h2>헤더</h2>
+import './style.css';
 
-    <nav>클릭1</nav>
-    <nav>클릭2</nav>
-    </>
+export default function Header() {
+
+    return (
+        <div className='header'>
+            <header className='headerObj'>
+                <h1 className='logo'>LOGO</h1>
+                <nav>
+                    <ul className='nav-links'>
+                        <li><a href='/'>Home</a></li>
+                        <li><a href='/about'>About</a></li>
+                        <li><a href='/contact'>Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
     );
-};
-export default Header
+}

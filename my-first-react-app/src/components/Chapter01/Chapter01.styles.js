@@ -1,5 +1,13 @@
 import styled from "styled-components";
 
+const StyledDiv = styled.div`
+    width : 100%;
+    height : 200px;
+    border : 1px solid lightblue;
+    margin : 40px;
+    background-color : ${(props) => (props.color ? props.color : "white")};
+`;
+
 export const StyledP = styled.p`
     background-color: pink;
     color : white;

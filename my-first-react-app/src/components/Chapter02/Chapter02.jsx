@@ -2,13 +2,7 @@
 // 요번 타임 주제 => 회원들의 정보를 받아왔다고 가정
 import { StyledP } from "../Chapter01/Chapter01.styles";
 
-const StyledDiv = styled.div`
-    width : 100%;
-    height : 200px;
-    border : 1px solid lightblue;
-    margin : 40px;
-    background-color : ${(props) => (props.color ? props.color : "white")};
-`;
+
 
 const members = [
     {

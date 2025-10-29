@@ -14,6 +14,7 @@
 */
 
 import { useState } from "react";
+import Chapter03_2 from "./Chapter03_2";
 
 const Chapter03 = () => {
     // let count = 0;
@@ -72,6 +73,10 @@ const onClickButton = () => {
             <br />
             <h3>{count}</h3>
             <button onClick={onClickButton}>나 클릭하면 숫자 증가함</button>
+
+            <hr />
+
+            <Chapter03_2 />
         </>
     );
 };
